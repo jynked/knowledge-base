@@ -1,0 +1,226 @@
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('../fonts/Comfortaa-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('../fonts/Comfortaa-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('../fonts/Comfortaa-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('../fonts/Comfortaa-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Comfortaa', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+}
+
+body {
+    background: #EEE;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1600px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .filters {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+    }
+}
+
+.new-note {
+    button {
+        --bs-btn-active-bg: #e4e4e4;
+        --bs-btn-active-border-color: #DDD;
+        color: #333 !important;
+        border: 2px solid #DDD;
+        background: #DDD;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 14px;
+
+        &:hover {
+            background: #e4e4e4;
+            border: 2px solid #DDD;
+        }
+    }
+}
+
+.new-note-skeleton {
+    border: 2px solid #DDD;
+    border-radius: 10px;
+    width: 90px;
+    height: 45px;
+}
+
+.redact {
+    button {
+        color: #333 !important;
+        border: 2px solid #DDD;
+        background: #DDD;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 14px;
+        transition: ease .2s;
+
+        &:hover {
+            transition: ease .2s;
+            background: #e4e4e4;
+            border: 2px solid #DDD;
+        }
+    }
+
+    & button.dark {
+        background: #EEE;
+        transition: ease .2s;
+    }
+}
+
+.alerts {
+        position: absolute;
+        margin-left: auto;
+        left: 20px;
+        right: 20px;
+        top: 20px;
+        max-width: 370px;
+        display: flex;
+        flex-direction: column;
+        .success {
+            width: 100%;
+        }
+}
+
+.btn-close {
+    --bs-btn-close-focus-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0);
+    transition: ease .2s;
+}
+
+.notes-block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(10, 10, 10, .3);
+    background: #EEE;
+    border-radius: 10px;
+    padding: 30px;
+    gap: 15px;
+    width: 100%;
+}
+
+.note-body {
+    width: fit-content;
+    min-width: 100px;
+    max-width: 500px;
+    padding: 20px;
+    border: 2px solid #333;
+    background: #DDD;
+    border-radius: 15px;
+
+    span {
+        width: 200px;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 25px;
+
+        .title {
+            font-size: 20px;
+
+            p {
+                margin-bottom: 5px;
+            }
+        }
+
+        .pre-title {
+            font-size: 12px;
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    .memo-wrapper {
+        border-top: 1px solid rgba(10, 10, 10, 0.6);
+        border-radius: 10px;
+        padding-top: 15px;
+
+        .memo {
+            font-size: 16px;
+            background: #EEE;
+            border-radius: 15px;
+            padding: 10px;
+            width: 100%;
+            height: 150px;
+            overflow-y: scroll;
+
+            p {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        .memo-redact {
+            font-size: 16px;
+            border: 2px solid rgba(10, 10, 10, 1);
+            background: #EEE;
+            border-radius: 15px;
+        }
+    }
+    button {
+        margin-top: 15px;
+        --bs-btn-active-bg: #e4e4e4;
+        --bs-btn-active-border-color: #DDD;
+        color: #333 !important;
+        border: 2px solid #EEE;
+        background: #DDD;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 14px;
+        width: 100%;
+
+        &:hover {
+            background: #e4e4e4;
+            border: 2px solid #EEE;
+        }
+    }
+}
+
+
+
+@media (max-width: 1100px) {}
